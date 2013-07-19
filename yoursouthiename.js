@@ -1,10 +1,14 @@
 
-// Meteor.Router.add({
-//   "/edit": "edit",
-//   "" : "form"
-// });
-
 if (Meteor.isClient) {
+
+  Meteor.Router.add({
+    "/edit": function () {
+      return "edit";
+    },
+    "/" : function () {
+      return "index";
+    }
+  });
   
   Template.greeting.response = function() {
     var name = Session.get('ysn-name');
@@ -26,6 +30,13 @@ if (Meteor.isClient) {
         Session.set('ysn-name', $('#sas-name').val())
         $('#sas-name').val('').blur();
       }
+    }
+  });
+  
+  Template.edit.events({
+    'submit #ysn-first-form' : function (e) {
+      e.preventDefault();
+      console.log('he');
     }
   });
 }
