@@ -1,11 +1,11 @@
 var salutations = [
-  '\'tsup @',
-  'what\'s shakin, @',
+  '\'tsup @!',
+  'what\'s shakin, @?',
   'meet you at the packie, @!',
-  'S\'up @',
-  'What\'s goin on @',
-  'S\'appenin @',
-  'What\'s doin\' @',
+  'S\'up @!',
+  'What\'s goin on @?',
+  'S\'appenin @?',
+  'What\'s doin\' @?',
 ];
 
 Salutations = new Meteor.Collection("salutations");

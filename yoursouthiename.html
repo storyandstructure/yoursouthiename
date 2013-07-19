@@ -8,13 +8,13 @@
     <content class="row-fluid">
       <div class="span12">
         <h1>yoursouthiename.com</h1>
-      <hr/>
-        {{>form}}
+        <hr/>
+        {{> form}}
       </div>
     </content>
     <content class="row-fluid">
       <div class="span12">
-      {{> greeting }}
+      {{> greeting}}
       </div>    
     </content>
     <footer class="row-fluid">
@@ -27,7 +27,7 @@
 <template name="form">
   <div class="input-append">
     <form id="sas-form">
-      <input class="span8" id="sas-name" type="text">
+      <input class="input-large" id="sas-name" type="text" placeholder="{{randomName}}">
       <input class="btn btn-info" type="submit" id="sas-go" value="Go!" />
     </form>
   </div>
@@ -35,9 +35,9 @@
 </template>
 
 <template name="greeting">
-  <h1>{{ response }}</h1>
+  <h1>{{response}}</h1>
   
-  {{#if response }}
+  {{#if response}}
   <button class="btn btn-primary">Share on Facebook</button>
   {{/if}}
 
