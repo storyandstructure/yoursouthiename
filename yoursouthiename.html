@@ -6,18 +6,19 @@
   <div class="container">
     <div class="row">
       <div class="span12">
-        {{>content}}
+        <h1>YourSouthieName.com</h1>
+        {{>form}}
       </div>
     </div>
   </div>
 </body>
 
-<template name="content">
-  <h1>YourSouthieName.com</h1>
-  
+<template name="form">  
   <div class="input-append">
-    <input class="span8" id="appendedInputButton" type="text">
-    <button class="btn" type="button">Go!</button>
+    <form id="sas-form">
+      <input class="span8" id="sas-name" type="text">
+      <input class="btn" type="button" id="sas-go" value="Go!" />
+    </form>
   </div>
   
 </template>

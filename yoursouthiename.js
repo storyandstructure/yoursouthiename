@@ -1,13 +1,12 @@
 if (Meteor.isClient) {
-  Template.hello.greeting = function () {
-    return "Welcome to yoursouthiename.";
-  };
 
-  Template.hello.events({
-    'click input' : function () {
+  Template.form.events({
+    'submit form' : function (e) {
+      e.preventDefault();
       // template data, if any, is available in 'this'
       if (typeof console !== 'undefined')
-        console.log("You pressed the button");
+        console.log($('#sas-name').val());
+        $('#sas-name').val('').blur();
     }
   });
 }
