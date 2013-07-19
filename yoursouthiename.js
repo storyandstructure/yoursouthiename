@@ -4,8 +4,20 @@ if (Meteor.isClient) {
     var name = Session.get('ysn-name');
     
     if (name) {
+      
       var salutations = Salutations.find().fetch();
-      return salutations[_.random(salutations.length)].text.replace('@', name);      
+      
+      // translate your name...first parse it
+      
+      var pieces = name.split(' ');
+      var firstName = pieces[0];
+      var southieName;
+      
+      if (_.last(firstName) == 's') {
+        southieName = firstName + 'ie';
+      }
+      
+      return salutations[_.random(salutations.length)].text.replace('@', southieName);
     }
     
     Session.set('ysn-name', '');
