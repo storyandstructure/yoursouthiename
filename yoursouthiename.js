@@ -14,6 +14,8 @@ if (Meteor.isClient) {
       return salutations[_.random(salutations.length)].text.replace('@', name);      
     }
     
+    Session.set('ysn-name', '');
+    
   };
 
   Template.form.events({

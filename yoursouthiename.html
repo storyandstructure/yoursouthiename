@@ -5,11 +5,22 @@
 
 <body>
   <div class="container">
-    <div class="row">
+    <content class="row-fluid">
       <div class="span12">
-        {{renderPage}}
+        <h1>yoursouthiename.com</h1>
+        <hr/>
+        {{>form}}
       </div>
-    </div>
+    </content>
+    <content class="row-fluid">
+      <div class="span12">
+      {{> greeting }}
+      </div>    
+    </content>
+    <footer class="row-fluid">
+      <hr/>
+      <p class="small">Brought to you in good fun by <a href="www.storyandstructure.com">story+structure</p>
+    </footer>
   </div>
 </body>
 
@@ -22,10 +33,13 @@
     </form>
   </div>
   
-  {{> greeting }}
-  
 </template>
 
 <template name="greeting">
   <h1>{{ response }}</h1>
+  
+  {{#if response }}
+  <button class="btn btn-primary">Share on Facebook</button>
+  {{/if}}
+
 </template>
