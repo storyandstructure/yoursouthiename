@@ -1,7 +1,8 @@
-Meteor.Router.add({
-  "/": "form",
-  "/edit": "edit"
-});
+
+// Meteor.Router.add({
+//   "/edit": "edit",
+//   "" : "form"
+// });
 
 if (Meteor.isClient) {
   
