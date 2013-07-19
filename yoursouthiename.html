@@ -1,10 +1,11 @@
 <head>
-  <title>Your Southie Name</title>
+  <title>Hi From Southie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
   <div class="container">
+<<<<<<< HEAD
     <div class="row-fluid">
       <content>
         {{renderPage}}   
@@ -14,6 +15,24 @@
         <p class="small">Brought to you in good fun by <a href="http://www.storyandstructure.com">story+structure</p>
       </footer>
     </div>
+=======
+    <content class="row-fluid">
+      <div class="span12">
+        <h1>hifromsouthie.com</h1>
+        <hr/>
+        {{> form}}
+      </div>
+    </content>
+    <content class="row-fluid">
+      <div class="span12">
+      {{> greeting}}
+      </div>    
+    </content>
+    <footer class="row-fluid">
+      <hr/>
+      <p class="small">Brought to you in good fun by the folks at <a href="www.storyandstructure.com">story+structure</p>
+    </footer>
+>>>>>>> b4e1c75073798d76f827c98e18cfdba79ab03d7d
   </div>
 </body>
 
@@ -29,17 +48,17 @@
 <template name="form">
   <div class="input-append">
     <form id="sas-form">
-      <input class="span8" id="sas-name" type="text">
-      <input class="btn btn-info" type="submit" id="sas-go" value="Book it!" />
+      <input class="input-large" id="sas-name" type="text" placeholder="{{randomName}}">
+      <input class="btn btn-info" type="submit" id="sas-go" value="Go!" />
     </form>
   </div>
   
 </template>
 
 <template name="greeting">
-  <h2>{{ response }}</h2>
+  <h1>{{response}}</h1>
   
-  {{#if response }}
+  {{#if response}}
   <button class="btn btn-primary">Share on Facebook</button>
   {{/if}}
 

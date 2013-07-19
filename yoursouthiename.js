@@ -11,11 +11,14 @@ if (Meteor.isClient) {
   });
 
   function getSouthieName(name) {
-    // translate your name...first parse it
     
+    if (_.random(0, 3) == 0) {
+      return 'asshole'
+    }
+    
+    // translate your name...first parse it
     var pieces = name.split(' ');
     var firstName = pieces[0];
-    var southieName;
     
     if (firstName.slice(-1) == 's') {
       return firstName + 'ie';
@@ -39,7 +42,7 @@ if (Meteor.isClient) {
       return _.first(firstName) + 'az';
     }
     
-    return '. I have no friggin\' clue what ya name is. Yuh screwed!';
+    return '.\nI have no friggin\' clue what ya name is.\nYuh screwed!';
 
   }
   
@@ -71,6 +74,11 @@ if (Meteor.isClient) {
   Template.edit.specials = function() {
     return Specials.find();
   }
+
+  Template.form.randomName = function() {
+    return 'Mike Trachtman';
+  };
+
 
   Template.form.events({
     'submit form' : function (e) {
