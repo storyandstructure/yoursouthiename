@@ -7,14 +7,14 @@
   <div class="container">
     <div class="row">
       <div class="span12">
-        <h1>YourSouthieName.com</h1>
+        <h1>yoursouthiename.com</h1>
         {{>form}}
       </div>
     </div>
   </div>
 </body>
 
-<template name="form">  
+<template name="form">
   <div class="input-append">
     <form id="sas-form">
       <input class="span8" id="sas-name" type="text">
@@ -22,4 +22,10 @@
     </form>
   </div>
   
+  {{> greeting }}
+  
+</template>
+
+<template name="greeting">
+  <h1>{{ response }}</h1>
 </template>
