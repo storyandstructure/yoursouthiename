@@ -6,6 +6,7 @@ var salutations = [
   'What\'s goin on @?',
   'S\'appenin @?',
   'What\'s doin\' @?',
+  'That\'s what I\'m talkin\' about, @!',
 ];
 
 FirstNames = new Meteor.Collection("firstnames");
