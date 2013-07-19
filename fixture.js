@@ -8,7 +8,10 @@ var salutations = [
   'What\'s doin\' @',
 ];
 
+FirstNames = new Meteor.Collection("firstnames");
+LastNames = new Meteor.Collection("lastnames");
 Salutations = new Meteor.Collection("salutations");
+Specials = new Meteor.Collection("specials");
 
 Meteor.startup(function() {
 

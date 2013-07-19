@@ -48,10 +48,10 @@
 <template name="edit">
   <div class="span12">
     <ul class="nav nav-tabs" id="ysn-edit-nav">
-      <li class="active"><a href="#first">Home</a></li>
-      <li><a href="#last">Profile</a></li>
-      <li><a href="#salutations">Messages</a></li>
-      <li><a href="#special">Settings</a></li>
+      <li class="active"><a href="#first">First Names</a></li>
+      <li><a href="#last">Last Names</a></li>
+      <li><a href="#salutations">Salutations</a></li>
+      <li><a href="#special">Special</a></li>
     </ul>
 
     <div class="tab-content">
@@ -68,7 +68,7 @@
           {{#each firstNames}}
             <tr>
               <td>{{english}}</td>
-              </td>{{southie}}</td>
+              <td>{{southie}}</td>
             </tr>
           {{/each}}
         </table>
@@ -76,6 +76,13 @@
       
       <div class="tab-pane" id="last">
         <h2>Last Names</h2>
+        <form id="ysn-last-form">
+          <div class="form-horizontal">
+            <input class="span4" id="ysn-last-english" type="text" placeholder="English" />
+            <input class="span4" id="ysn-last-southie" type="text" placeholder="Southie" />
+            <input type="submit" class="btn btn-info" />
+          </div>
+        </form>
         <table class="table table-striped">
           {{#each lastNames}}
             <tr>
@@ -88,6 +95,13 @@
       
       <div class="tab-pane" id="salutation">
         <h2>Salutations</h2>
+        <form id="ysn-salutation-form">
+          <div class="form-horizontal">
+            <input class="span4" id="ysn-salutation-english" type="text" placeholder="English" />
+            <input class="span4" id="ysn-salutation-southie" type="text" placeholder="Southie" />
+            <input type="submit" class="btn btn-info" />
+          </div>
+        </form>
         <table class="table table-striped">
           {{#each salutations}}
             <tr>
@@ -100,6 +114,13 @@
       
       <div class="tab-pane" id="special">
         <h2>Special</h2>
+        <form id="ysn-special-form">
+          <div class="form-horizontal">
+            <input class="span4" id="ysn-special-english" type="text" placeholder="English" />
+            <input class="span4" id="ysn-special-southie" type="text" placeholder="Southie" />
+            <input type="submit" class="btn btn-info" />
+          </div>
+        </form>
         <table class="table table-striped">
           {{#each special}}
             <tr>

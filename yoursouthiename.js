@@ -55,6 +55,22 @@ if (Meteor.isClient) {
     Session.set('ysn-name', '');
     
   };
+  
+  Template.edit.firstNames = function() {
+    return FirstNames.find();
+  }
+  
+  Template.edit.lastNames = function() {
+    return LastNames.find();
+  }
+  
+  Template.edit.salutations = function() {
+    return Salutations.find();
+  }
+  
+  Template.edit.specials = function() {
+    return Specials.find();
+  }
 
   Template.form.events({
     'submit form' : function (e) {
@@ -70,7 +86,39 @@ if (Meteor.isClient) {
   Template.edit.events({
     'submit #ysn-first-form' : function (e) {
       e.preventDefault();
-      console.log('he');
+      FirstNames.insert({
+        english: $('#ysn-first-english').val(),
+        southie: $('#ysn-first-southie').val()
+      });
+      $('#ysn-first-english').val('').blur();
+      $('#ysn-first-southie').val('').blur();
+    },
+    'submit #ysn-last-form' : function (e) {
+      e.preventDefault();
+      LastNames.insert({
+        english: $('#ysn-last-english').val(),
+        southie: $('#ysn-last-southie').val()
+      });
+      $('#ysn-last-english').val('').blur();
+      $('#ysn-last-southie').val('').blur();
+    },
+    'submit #ysn-salutation-form' : function (e) {
+      e.preventDefault();
+      Salutations.insert({
+        english: $('#ysn-salutation-english').val(),
+        southie: $('#ysn-salutation-southie').val()
+      });
+      $('#ysn-salutation-english').val('').blur();
+      $('#ysn-salutation-southie').val('').blur();
+    },
+    'submit #ysn-special-form' : function (e) {
+      e.preventDefault();
+      Specials.insert({
+        english: $('#ysn-special-english').val(),
+        southie: $('#ysn-special-southie').val()
+      });
+      $('#ysn-special-english').val('').blur();
+      $('#ysn-special-southie').val('').blur();
     }
   });
 }
