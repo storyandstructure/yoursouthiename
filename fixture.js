@@ -1,3 +1,9 @@
+var salutations = [
+  '\'tsup @',
+  'what\'s shakin, @',
+  'meet you at the packie, @!',
+];
+
 var first_guys = [
 { name: 'Chokdee' },
 { name: 'James' },
