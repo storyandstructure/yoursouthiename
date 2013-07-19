@@ -1,3 +1,8 @@
+Meteor.Router.add({
+  "/": "form",
+  "/edit": "edit"
+});
+
 if (Meteor.isClient) {
   
   Template.greeting.response = function() {

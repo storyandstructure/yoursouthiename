@@ -7,18 +7,18 @@
   <div class="container">
     <div class="row">
       <div class="span12">
-        <h1>yoursouthiename.com</h1>
-        {{>form}}
+        {{renderPage}}
       </div>
     </div>
   </div>
 </body>
 
 <template name="form">
+  <h1>yoursouthiename.com</h1>
   <div class="input-append">
     <form id="sas-form">
       <input class="span8" id="sas-name" type="text">
-      <input class="btn" type="submit" id="sas-go" value="Go!" />
+      <input class="btn" type="submit" id="sas-go" value="Book it!" />
     </form>
   </div>
   
