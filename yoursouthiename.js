@@ -6,9 +6,13 @@ Meteor.Router.add({
 if (Meteor.isClient) {
   
   Template.greeting.response = function() {
-    if (Session.get('ysn-name')) {
-      return 'tsup jonesie!';
+    var name = Session.get('ysn-name');
+    
+    if (name) {
+      var salutations = Salutations.find().fetch();
+      return salutations[_.random(salutations.length)].text.replace('@', name);      
     }
+    
   };
 
   Template.form.events({

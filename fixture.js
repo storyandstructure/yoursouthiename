@@ -4,6 +4,20 @@ var salutations = [
   'meet you at the packie, @!',
 ];
 
+Salutations = new Meteor.Collection("salutations");
+
+Meteor.startup(function() {
+
+  if (Salutations.find().count() === 0) {
+    _.each(salutations, function(salutation) {
+      Salutations.insert({
+        text: salutation,
+      });
+    });
+  }
+
+});
+
 var first_guys = [
 { name: 'Chokdee' },
 { name: 'James' },
